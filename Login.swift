@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class Login: UIViewController {
     
@@ -34,6 +35,32 @@ class Login: UIViewController {
      // MARK: - Navigation
     
     @IBAction func loginButton(_ sender: UIButton) {
+        //let appDel:AppDelegate = (UIApplication.shared.delegate as! AppDelegate)
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+
+        
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Users")
+        request.returnsObjectsAsFaults = false
+        request.predicate = NSPredicate(format: "email = %@", "" + loginEmailTextField.text!)
+        
+        let results:NSArray = try! context.fetch(request) as NSArray
+        
+        
+        
+        if(results.count > 1){
+            let res = results[0] as! NSManagedObject
+            loginEmailTextField.text = res.value(forKey: "email") as? String
+            loginPasswordTextField.text = res.value(forKey: "password") as? String
+            
+            //for res in results {
+            //   print(res)
+            
+            
+        }else{
+            print("Incorrect username and password")
+        }
+  
+        
     }
     
     @IBAction func changePasswordButton(_ sender: UIButton) {
