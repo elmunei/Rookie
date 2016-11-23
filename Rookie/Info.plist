@@ -15,11 +15,45 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>1.0.1</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>Fabric</key>
+	<dict>
+		<key>APIKey</key>
+		<string>13cef3f9d071db0010591283511396943c5adf78</string>
+		<key>Kits</key>
+		<array>
+			<dict>
+				<key>KitInfo</key>
+				<dict/>
+				<key>KitName</key>
+				<string>Crashlytics</string>
+			</dict>
+			<dict>
+				<key>KitInfo</key>
+				<dict>
+					<key>branch_key</key>
+					<string>key_live_nlslIqn2WKEN7xGSA7gV8ohdyCeumexv</string>
+				</dict>
+				<key>KitName</key>
+				<string>Branch</string>
+			</dict>
+			<dict>
+				<key>KitInfo</key>
+				<dict>
+					<key>socket_token</key>
+					<string>AANYCl0BrLYfnMYn72Bl4RaIzbSTSVqR~7899670464</string>
+				</dict>
+				<key>KitName</key>
+				<string>Optimizely</string>
+			</dict>
+		</array>
+	</dict>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>UILaunchImageFile</key>
+	<string>1-Walkthrough</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
